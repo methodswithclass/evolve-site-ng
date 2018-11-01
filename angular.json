@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "evolve-site-ng": {
-      "root": "",
+      "root": "./",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -23,9 +23,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/sass/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/supporting-code.js",
+              "node_modules/hammerjs/hammer.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,7 +75,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -123,5 +126,10 @@
       }
     }
   },
-  "defaultProject": "evolve-site-ng"
+  "defaultProject": "evolve-site-ng",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
