@@ -9,7 +9,7 @@ pushConst="pushOnly"
 standardConst="standard"
 standardOp="standardOperation"
 
-arguments="false"
+arguments=false
 
 first="$1"
 second="$2"
